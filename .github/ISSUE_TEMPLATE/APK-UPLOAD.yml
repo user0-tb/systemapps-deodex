@@ -4,10 +4,6 @@ title: "🐛 [BUG] - <title>"
 labels: [
   "upload"
 ]
-body:
-  - type: textarea
-    id: description
-    attributes:
   - type: input
     id: tevice
     attributes:
