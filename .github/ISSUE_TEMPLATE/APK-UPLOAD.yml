@@ -1,0 +1,60 @@
+name: "🧑‍💻 Apk Upload"
+description: Upload a new Apk File. Please do not duplicate.
+title: "🐛 [BUG] - <title>"
+labels: [
+  "upload"
+]
+body:
+  - type: textarea
+    id: description
+    attributes:
+  - type: input
+    id: tevice
+    attributes:
+      label: "Device Name"
+      description: Please enter the name of the device from which the apk was extracted or the source from witch the apk file is downloaded.
+      placeholder: ex. Huawei y9 prime 2019 or F-Droid
+    validations:
+      required: true
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "What happens if you try to install the apk"
+      description: Please enter an explicit description of your issue
+      value: |
+        1. Package Manager shows an error
+        2. Apk crashes after installation
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs"
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks. You can do this with adb logcat on your pc. Before doing this, please install adb on your pc.
+      render: bash
+    validations:
+      required: false
+  - type: dropdown
+    id: androidv
+    attributes:
+      label: "Android Version"
+      description: What android version is the apk for ?
+      multiple: true
+      options:
+        - Android 1.0
+        - Android 1.5
+        - Android 2.x
+        - Android 3.x
+        - Android 4.x
+        - Android 5.x
+        - Android 6.x
+        - Android 7.x
+        - Android 8.x
+        - Android 9.x
+        - Android 10.x
+        - Android 11.x
+        - Android 12.x/13.x
+        - Android 14.x
+    validations:
+      required: true
